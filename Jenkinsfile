@@ -5,7 +5,7 @@ pipeline {
 		stage('Build Docker image') {
 			steps {
 				script {
-					bat "docker build -t Clive2311/2311_MDP_ISA2 ."
+					bat "docker build -t clive2311/2311_MDP_ISA2 ."
 				}
 			}
 		}
@@ -21,7 +21,7 @@ pipeline {
 		stage('Run container') {
 			steps {
 				script {
-					bat "docker run -d --name 2311 -t Clive2311/2311_MDP_ISA2"
+					bat "docker run -d --name 2311 -t clive2311/2311_MDP_ISA2"
 				}
 			}
 		}
