@@ -2,14 +2,6 @@ pipeline {
 	agent any
 	
 	stages {
-		stage('Clone repository') {
-			steps {
-				script {
-					bat "git clone https://github.com/Clive2311/2311_ISA2.git"
-				}
-			}
-		}
-	
 		stage('Build Docker image') {
 			steps {
 				script {
