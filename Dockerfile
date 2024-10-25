@@ -1,3 +1,9 @@
+FROM ubuntu
 
-sudo apt-get install python3
-cp app.py /opt/app
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip
+RUN apt-get install -y python3-flask
+
+COPY . /opt/app
+
+ENTRYPOINT FLASK_APP=/opt/app/app.py flask run
