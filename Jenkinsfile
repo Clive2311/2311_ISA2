@@ -18,7 +18,7 @@ pipeline {
 			}
 		}
 		
-		stage('Delete Container') {
+		stage('Delete Container if already exists') {
 			steps {
 				script {
 					bat "docker rm -f 2311 || exit 0"
